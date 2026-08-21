@@ -1,0 +1,8 @@
+[
+  {
+    "id": "emit-cube",
+    "title": "Emit deterministic cube from image",
+    "command": "python3 {plugin_dir}/tools/emit_cube.py --image <image> --workspace {workspace}",
+    "after": []
+  }
+]
