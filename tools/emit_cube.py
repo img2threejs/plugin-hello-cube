@@ -47,13 +47,11 @@ def main(argv=None):
     artifact = workspace / ".img2" / "artifacts" / PLUGIN_ID / "cube.js"
     artifact.parent.mkdir(parents=True, exist_ok=True)
     artifact.write_text(TEMPLATE.format(size=size, hex=color_hex), encoding="utf-8")
-    state = core_state.load_state(workspace)
-    core_state.plugin_state(state, PLUGIN_ID).update({
+    core_state.update_plugin_state(workspace, PLUGIN_ID, lambda entry: entry.update({
         "lastImage": str(image.resolve()),
         "colorHex": "#" + color_hex,
         "size": size,
-    })
-    core_state.save_state(workspace, state)
+    }))
     print(json.dumps({"artifact": str(artifact), "colorHex": "#" + color_hex, "size": size}))
 
 
