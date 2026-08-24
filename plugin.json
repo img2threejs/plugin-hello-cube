@@ -1,8 +1,16 @@
 {
   "schema": 1,
   "name": "hello-cube",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turn an image into a deterministic Three.js cube (contract exerciser)",
-  "capabilities": [{ "from": "image", "to": "threejs-code" }],
-  "requires": { "harness": ">=0.1.0", "coreApi": 1 }
+  "capabilities": [
+    {
+      "from": "image",
+      "to": "threejs-code"
+    }
+  ],
+  "requires": {
+    "harness": ">=0.1.0",
+    "coreApi": 1
+  }
 }
