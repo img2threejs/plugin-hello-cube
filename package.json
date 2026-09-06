@@ -1,0 +1,20 @@
+{
+  "name": "@img2threejs/plugin-hello-cube",
+  "version": "0.1.2",
+  "description": "Turn an image into a deterministic Three.js cube (contract exerciser)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/img2threejs/plugin-hello-cube.git"
+  },
+  "files": [
+    "SKILL.md",
+    "gates.json",
+    "plugin.json",
+    "steps.json",
+    "tools"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
