@@ -21,3 +21,11 @@ python3 -m unittest discover -s tests       # test (needs a sibling/linked harne
 ```
 
 Full walkthrough: `docs/WRITING_A_PLUGIN.md` in the [img2 harness](https://github.com/img2threejs/img2).
+
+## Publishing to npm
+
+1. Bump the version in **both** `plugin.json` and `package.json` — CI's `version-sync` job fails the build if they disagree.
+2. Update `CHANGELOG.md` if the repo has one.
+3. Commit the bump.
+4. Tag the commit `vX.Y.Z` (matching the new version) and push the tag.
+5. The `publish` workflow picks up the tag, re-checks the version match, and runs `npm publish --provenance --access public` against `@img2threejs/plugin-hello-cube`.
